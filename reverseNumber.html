@@ -1,0 +1,20 @@
+<html>
+  <head>
+
+  </head>
+  <body>
+    <script>
+      const reverseNumber = num => {
+        let reversedString = num.toString().split('').reverse().join('');
+        if (reversedString.endsWith('-')) reversedString = '-' + reversedString.slice(0, reversedString.length - 1);
+        return +reversedString;
+      }
+
+      console.log(
+      ' reverseNumber(-91) = ', reverseNumber(-91) + '\n',
+      'reverseNumber(3) = ', reverseNumber(3) + '\n',
+      'reverseNumber(-21) = ', reverseNumber(-21) + '\n',
+      'reverseNumber(1000) = ', reverseNumber(1000) + '\n');
+    </script>
+  </body>
+</html>

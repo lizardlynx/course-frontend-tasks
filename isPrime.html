@@ -1,0 +1,20 @@
+<html>
+  <head></head>
+  <body>
+    <script>
+      const isPrime = num => {
+        if (num < 1) return false;
+        for (let i = 2; i < num; i++) {
+          if (num%i === 0) return false;
+        }
+        return true;
+      }
+
+      console.log(
+      ' isPrime(-11) = ', isPrime(-11) + '\n',
+      'isPrime(3) = ', isPrime(3) + '\n',
+      'isPrime(121) = ', isPrime(121) + '\n',
+      'isPrime(20202) = ', isPrime(20202) + '\n');
+    </script>
+  </body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+  </head>
+  <body>
+    <script>
+      function play(range, safe, prizes) {
+        let i = 0;
+        const num = Math.floor(Math.random()*range);
+        while (i !== 3) {
+          const ans = +(prompt(`Guess an integer from 0 to ${range} \n
+                              Attempts left: ${3 - i} \n
+                              Total prize: ${safe.prize} \n
+                              Possible price on current attempt: ${safe.prize + prizes[i]}`));
+          if (!(ans >= 0 && ans <= range)) {
+            console.log('Read the description of the task, please!');
+            continue;
+          } else if (ans !== num) {
+            i++;
+            if (i === 3) {
+              console.log(`Thank you for a game. Your prize is: ${safe.prize}$`);
+              return confirm('You lost! Would you like to play again?');
+            }
+          } else {
+            const addition = prizes[i];
+            if (addition) safe.prize += addition; 
+            else console.error('Smth went wrong... Contact the manager!');
+            return confirm(`Your prize now is ${safe.prize}! Would you like to play again?`);
+          }
+        }
+      }
+      const res = confirm('Do you want to play a game?');
+      if (!res) console.log('You did not become a millionaire=(');
+      else {
+        let safe = {prize: 0};
+        let range = 5;
+        let timesPlayed = 1;
+        let playAgain = true;
+        const prizes = [10, 5, 2];
+        while (playAgain) {
+          playAgain = false;
+          playAgain = play(range, safe, prizes);
+          range *= 2;
+          prizes.map(el => el * 3);
+          timesPlayed++;
+        }
+      }
+    </script>
+  </body>
+</html>

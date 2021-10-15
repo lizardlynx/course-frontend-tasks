@@ -1,0 +1,22 @@
+<html>
+  <head>
+
+  </head>
+  <body>
+    <script>
+      const getClosestToZero = (...args) => {
+        args = args.map(el => Math.abs(el));
+        let closest = Infinity;
+        for (let num of args) {
+          if(num < closest) closest = num;
+        }
+        return closest;
+      }
+      console.log(
+      ' getClosestToZero(3, 5, -3) = ', getClosestToZero(3, 5, -3) + '\n',
+      'getClosestToZero(5, 3, 7) = ', getClosestToZero(5, 3, 7) + '\n',
+      'getClosestToZero(20, -9, 0, 0, 8) = ', getClosestToZero(20, -9, 0, 0, 8) + '\n',
+      'getClosestToZero(-20, 9) = ', getClosestToZero(-20, 9) + '\n');
+    </script>
+  </body>
+</html>
