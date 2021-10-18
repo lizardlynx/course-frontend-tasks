@@ -1,0 +1,475 @@
+:root {
+  --main-border-color: rgb(100, 100, 100);
+  --div-background-color: rgb(33, 33, 41);
+  --icon-background-color: rgba(72, 72, 83, 0.849);
+  --accent-violet: rgb(182, 101, 230);
+  --main-background: rgba(39, 37, 37, 0.719);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  color: white;
+  overflow: hidden;
+  background-image: linear-gradient(to bottom left, darkblue, blue 10%, red);
+}
+
+div#container {
+  margin: 50px auto;
+  width: 80%;
+  border: 4px solid var(--main-border-color);
+  border-radius: 30px;
+  background-color: var(--main-background);
+  display: grid;
+  grid-template-columns: 63.5% 33%;
+  gap: 1.5%;
+  padding: 10px;
+  height: auto;
+}
+
+div#container > div#left-container {
+  border: none;
+  box-shadow: none;
+  margin-bottom: 20px;
+}
+
+div#container > div#right-container {
+  margin: 20px 0;
+}
+
+header {
+  margin: 20px;
+  display: grid;
+  grid-template-columns: 37% 60%;
+  gap: 3%;
+}
+
+img {
+  width: 35px;
+  height: 35px;
+  object-fit: cover;
+}
+
+div#container > div img.avatar {
+  border: 3px solid var(--accent-violet);
+  box-shadow: 0px 0px 10px var(--accent-violet);
+  border-radius: 13px;
+  width: 45px;
+  height: 45px;
+}
+
+div#container div {
+  border: 1px solid var(--main-border-color);
+  border-radius: 16px;
+  box-shadow: 0px 0px 4px black;
+}
+
+div#container > div div.menu-icon {
+  background-color: var(--icon-background-color);
+  padding: 4.1px;
+  width: 45px;
+  height: 45px;
+  border-radius: 13px;
+}
+
+div#container > div img.more-info {
+  width: 25px;
+  height: 25px;
+  border: none;
+  box-shadow: none;
+  position: absolute;
+  top: 9px;
+  right: 5px;
+}
+
+div#container header div.info-container {
+  padding: 10px;
+  background-color: var(--div-background-color);
+  height: auto;
+  position: relative;
+  display: grid;
+  grid-template-areas: "a b b c d";
+}
+
+div#container header div.info-container p {
+  text-align: left;
+}
+
+input {
+  background-color: var(--div-background-color);
+  border: 1px solid var(--main-border-color);
+  border-radius: 16px;
+  box-shadow: 0px 0px 4px black; 
+  height: 40px;
+  padding-right: 10px;
+  font-size:large;
+  color: azure;
+  text-align: end;
+}
+
+p {
+  margin-top: 5px;
+  margin-bottom: 0;
+  height: 30px;
+}
+
+span {
+  display: block;
+  font-weight: 700;
+}
+
+div#container div.column-left-container {
+  border: none;
+  box-shadow: none;
+  display: grid;
+  grid-template-columns: 7% 51% 38%;
+  gap: 2%;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+div#container div.column-left-container > div {
+  border: none;
+  box-shadow: none;
+  position: relative;
+}
+
+.column-left-container > div > div {
+  background-color: var(--div-background-color);
+  height: auto;
+  width: 100%;
+  padding-bottom: 0px;
+}
+
+div#container div.column-left-container div#debit-card {
+  background-image: linear-gradient(to bottom right, var(--accent-violet) 40%, cyan);
+  position: relative;
+  font-size: x-large;
+}
+
+div#container div.column-left-container div#debit-card > div {
+  border: none;
+  box-shadow: none;
+}
+
+div#expire-date {
+  position: absolute;
+  right: 30px;
+  top: 30px;
+}
+
+div#debit {
+  position: absolute;
+  bottom: 30px;
+  left: 30px;
+}
+
+div#visa {
+  position: absolute;
+  bottom: 10px;
+  right: 30px;
+}
+
+div#visa > img {
+  width: 100px;
+  height: auto;
+}
+
+div#pages > div#home {
+  background-color: var(--accent-violet);
+  border: none;
+}
+
+.column-left-container > div > div > div {
+  display: block;
+  margin: 10px auto;
+}
+
+div#settings {
+  position: absolute;
+  bottom: 0;
+}
+
+.column-left-container > div > #debit-card {
+  width: 100%;
+  height: 230px;
+  background-color: azure;
+  border: none;
+  border-radius: 35px;
+}
+
+.column-left-container > div > #monthly-expenses {
+  width: 100%;
+  height: 470px;
+  margin-top: 20px;
+  padding: 20px;
+  position: relative;
+}
+
+h3 {
+  margin: 0;
+}
+
+div#container div div#circle {
+  border: none;
+  box-shadow: none;
+  margin-top: 20px;
+  width: 200px;
+  height: 200px;
+  background-image: radial-gradient(var(--accent-violet) 30%, var(--div-background-color) 70%);
+}
+
+.column-left-container > div > #exchange {
+  width: 100%;
+  height: 300px;
+  margin-bottom: 20px;
+}
+
+.column-left-container > div > #transfer {
+  width: 100%;
+  height: 400px;
+}
+
+.column-left-container > div {
+  border: 1px solid white;
+}
+
+div#monthly-expenses > p{
+  color:rgb(219, 212, 212);
+  height: auto;
+}
+
+div#monthly-expenses > div#expenses {
+  display: grid;
+  grid-template-columns: 31% 31% 31%;
+  gap: 3%;
+  border: none;
+  box-shadow: none;
+}
+
+div#monthly-expenses > div#expenses > div,
+div#monthly-expenses > div#expenses > div > div {
+  height: auto;
+  padding: 2px;
+  border: none;
+  box-shadow: none;
+}
+
+div#monthly-expenses > div#expenses > div {
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+}
+
+div#monthly-expenses > div#expenses > div > div p {
+  background-color: white;
+  color: black;
+  padding: 2px;
+  border-radius: 5px;
+  text-align: center;
+  height: auto;
+  width: 90%;
+  margin: 10px auto;
+}
+
+div#monthly-expenses > div#expenses > div span {
+  margin-left: 10px;
+  display: inline;
+}
+
+div#monthly-expenses > div#expenses > div > div {
+  background-color: var(--div-background-color);
+}
+
+div#monthly-expenses > div#expenses > div > div > div {
+  background-color: white;
+  border: none;
+  margin: 10px auto;
+}
+
+div#monthly-expenses > div#expenses > div#travel {
+  background-color: purple;
+}
+
+div#monthly-expenses > div#expenses > div#shopping {
+  background-color: var(--accent-violet);
+}
+
+div#monthly-expenses > div#expenses > div#education {
+  background-color: violet;
+}
+
+div#exchange, div#transfer {
+  padding: 20px;
+  position: relative;
+}
+
+div#container div.money-input {
+  border: none;
+  box-shadow: none;
+  width: 60%;
+}
+
+div.money-input > input {
+  font-weight: bolder;
+  width: 80px;
+  border: none;
+  box-shadow: 0px 0px 4px var(--accent-violet);
+  background-color: var(--accent-violet);
+  margin-top: 30px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+}
+
+div#container div#exchange > div.menu-icon {
+  background-color: white;
+}
+
+div#exchange > div {
+  width: 50%;
+  border: none;
+  box-shadow: none;
+  margin: 0 auto;
+}
+
+div.money-input > input::placeholder {
+  color: white;
+  opacity: 1;
+}
+
+div.money-input > input.currency {
+  width: 40px;
+  margin-left: 40px;
+}
+
+div#transfer {
+  padding: 10px;
+}
+
+div#transfer p {
+  color:rgb(219, 212, 212);
+  height: auto;
+  margin-top: 40px;
+}
+
+div#transfer > div#people {
+  margin-top: 10px;
+  border: none;
+  box-shadow: none;
+  background-color: rgb(94, 92, 92);
+  padding: 10px 5px;
+  display: grid;
+  grid-template-columns: 24% 24% 24% 24%;
+  gap: 1.3%;
+  justify-items: center;
+  width: 90%;
+}
+
+div#container div#transfer > div#people .menu-icon {
+  border: none;
+  box-shadow: none;
+  background-color: var(--accent-violet);
+}
+
+button {
+  border: none;
+  width: 150px;
+  height: 50px;
+  background-color: var(--accent-violet);
+  border-radius: 15px;
+  margin: 20px auto;
+  color: white;
+  font-size: large;
+  display: block;
+}
+
+div.form-holder {
+  width: 50%;
+}
+
+div#container div#people > img.avatar,
+div#container div.transaction > img.avatar {
+  border: none;
+  box-shadow: none;
+}
+
+div#container > div#right-container {
+  background-color: var(--div-background-color);
+  padding: 20px;
+  position: relative;
+  border-radius: 30px;
+}
+
+h1 {
+  font-size: xxx-large;
+  margin-top: 20px;
+}
+
+div#container > div#right-container div {
+  border: none;
+  box-shadow: none;
+}
+
+div#right-container div#math {
+  display: inline;
+  margin-left: 10px;
+  margin-top: 30px;
+}
+
+div#count {
+  display: grid;
+  grid-template-columns: 40% 40%;
+  gap: 20px;
+}
+
+div#container > div#right-container span#plus {
+  font-weight: lighter;
+  color: greenyellow;
+}
+
+div#container > div#right-container span#minus {
+  font-weight: lighter;
+  color: red;
+}
+
+div#container > div#right-container > img.chart {
+  width: 400px;
+  height: 200px;
+  margin-top: 20px;
+  object-fit: fill;
+}
+
+div#container > div#right-container div.transaction-container {
+  border: inherit;
+  box-shadow: inherit;
+  padding: 10px;
+}
+
+div#container > div#right-container div.transaction-container > .transaction {
+  display: grid;
+  grid-template-columns: 20% 60% 20%;
+}
+
+div#container > div#right-container div.transaction-container > .transaction div.amount {
+  font-weight: bolder;
+  font-size: 20;
+  color: white;
+  text-align: right;
+}
+
+div#container > div#right-container p {
+  color: rgb(219, 212, 212);
+}
+
+div#container > div#right-container > p {
+  margin-top: 25px;
+}
+
+div#container > div#right-container div.transaction-container p {
+  font-size: 13;
+}
