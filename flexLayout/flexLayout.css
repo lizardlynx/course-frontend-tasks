@@ -1,0 +1,313 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --accent: rgb(196, 135, 253);
+}
+
+@font-face {
+  font-family: 'default';
+  src: url(./font/AntipastoPro-Extralight_trial.ttf);
+}
+
+body {
+  background-color: var(--accent);
+  margin: 0;
+  padding: 0;
+}
+
+div#container {
+  display: flex;
+  height: 90%;
+  flex-direction: row;
+  background-color: rgb(253, 250, 237);
+  border-radius: 30px;
+  margin: 40px;
+  margin-bottom: 20px;
+}
+
+main {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 80px;
+}
+
+div#tips {
+  flex: 1;
+}
+
+div#sidebar {
+  flex-shrink: 1;
+  background-color: rgb(248, 233, 220);
+  border-bottom-left-radius: 30px;
+  border-top-left-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  position: relative;
+
+}
+
+img#logo {
+  margin-bottom: 40px;
+  width: 50px;
+  height: 50px;
+}
+
+img.icon {
+  width: 40px;
+  height: 40px;
+}
+
+img#avatar {
+  position: absolute;
+  bottom: 20px;
+  object-fit: cover;
+  border-radius: 10px;
+  width: 50px;
+  height: 50px;
+
+}
+
+main > :nth-child(1) {
+  flex-shrink: 1;
+  display: flex;
+  flex-direction: row;
+}
+
+main > :nth-child(2) {
+  flex-shrink: 1;
+}
+
+main > :nth-child(3) {
+  flex-grow: 1;
+}
+
+input {
+  flex: 5;
+  border: none;
+  border-radius: 10px;
+  font-size: medium;
+  padding: 15px;
+  text-align: right;
+}
+
+main > :nth-child(1) > div {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  font-family: 'default';
+  font-size: xxx-large;
+  margin-left: 0;
+}
+
+main > :nth-child(2) {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+main > :nth-child(2) h1 {
+  flex: 5;
+}
+
+main > :nth-child(2) a {
+  text-align: center;
+  flex: 1;
+  color: rgb(155, 139, 122);
+  font-weight: 500;
+}
+
+main > :nth-child(2) > :nth-child(2) {
+  color: var(--accent);
+  font-weight: 900;
+  text-decoration: underline;
+}
+
+div#courses {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 3%;
+}
+
+div#courses > div {
+  background-size: 100% 100%;
+  border-radius: 30px;
+  padding: 20px;
+  position: relative;
+}
+
+h2 {
+  font-family: 'default';
+}
+
+div#courses > :nth-child(1) {
+  color: white;
+  flex: 1;
+  flex-basis: 100%;
+  background-image: url('https://p4.wallpaperbetter.com/wallpaper/721/98/412/minimalism-rainbows-blue-fox-wallpaper-preview.jpg');
+}
+
+div#courses > :nth-child(2) {
+  color: white;
+  flex: 1 1;
+  background-image: url('https://cdn.wallpapersafari.com/14/32/yWgxOC.jpg');
+}
+
+div#courses > :nth-child(3) {
+  flex: 2 0;
+  background-image: url('https://static01.nyt.com/images/2019/12/08/fashion/08BASELCVR/08BASELCVR-superJumbo.jpg');
+}
+
+p.time {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+}
+
+p.time + div {
+  position: absolute;
+  bottom: 20px;
+  background-color: rgba(245, 245, 245, 0.438);
+  border-radius: 10px;
+}
+
+div.people {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  height: 50px;
+  width: auto;
+}
+
+div.people > div {
+  border-radius: 50px;
+  background-image: url('https://www.booklya.ua/content/upload/persona/67k/67116/800x800/353766/dipper-payns.jpg');
+  width: 50px;
+  height: 50px;
+  border: 2px solid white;
+  background-size: contain;
+  display:inline-block;
+  margin: -10px;
+}
+
+div.people > div:nth-child(1) {
+  z-index: 1;
+}
+
+div.people > div:nth-child(4) {
+  overflow: hidden;
+  text-align: center;
+  font-size: small;
+  color: black;
+  background-image: none;
+  background-color: rgb(255, 251, 233);
+}
+
+div#tips {
+  display: flex;
+  flex-direction: column;
+}
+
+div#tips > div {
+  background-color: white;
+  border-radius: 20px;
+  gap: 10px;
+  margin: 20px;
+  padding: 20px;
+  box-shadow: 2px 2px 5px rgb(248, 240, 202);
+  position: relative;
+}
+
+div#tips > div >  a.view-all {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  color: var(--accent);
+  font-weight: 900;
+}
+
+div#tips > div p {
+  font-size: small;
+  color: gray;
+}
+
+div#tips > div h2 {
+  margin-bottom: 0;
+}
+
+div#tips > div:nth-child(1) {
+  flex: 2;
+}
+
+div#tips > div:nth-child(2) {
+  flex: 3;
+}
+
+div#tips > div div.course-icon {
+  display: flex;
+  flex-direction: row;
+  height: 80px;
+  gap: 10px;
+  align-items:flex-start;
+}
+
+h3 {
+  font-family: 'default';
+  font-size: medium;
+  font-weight: 400;
+  margin: 0;
+}
+
+div#tips > div div.course-icon > div:nth-child(1) {
+  flex: 3;
+  height: 50px;
+  border-radius: 10px;
+  background-image: url('https://media.istockphoto.com/photos/business-man-pushing-large-stone-up-to-hill-business-heavy-tasks-and-picture-id825383494?k=20&m=825383494&s=612x612&w=0&h=tEqZ5HFZcM3lmDm_cmI7hOeceiqy9gYrkyLTTkrXdY4=');
+}
+
+div#tips > div div.course-icon > div:nth-child(2) {
+  flex: 5;
+} 
+
+div#tips > div div.course-icon > div:nth-child(3) {
+  flex: 1;
+  background-color: rgba(154, 187, 206, 0.685);
+  height: 60px;
+  border-radius: 10px;
+}
+
+div#tips > div div.course-icon > div:nth-child(3) > img {
+  margin: 10px auto;
+}
+
+div#tips > div div.course-icon p {
+  margin-bottom: 0;
+}
+
+div#tips > div div.achievment {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items:flex-start;
+  margin-top: 20px;
+}
+
+div#tips div.achievment > div:nth-child(1){
+  flex: 2;
+  background-image: url(https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__340.jpg);
+  height: 100px;
+}
+
+div#tips div.achievment > div:nth-child(2){
+  flex: 3;
+}
+
